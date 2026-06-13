@@ -1,36 +1,164 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Veyes Infraas Website
 
-## Getting Started
+A modern, responsive corporate website developed for **Veyes Infraas**, a Chennai-based construction and infrastructure company specializing in Residential, Commercial, Industrial, and Interior projects.
 
-First, run the development server:
+## 🌐 Live Website
+
+https://veyesinfraas.netlify.app
+
+---
+
+## 🏢 About Veyes Infraas
+
+Veyes Infraas is a professional construction and infrastructure company delivering high-quality engineering solutions across Chennai and surrounding regions.
+
+### Core Services
+
+- Residential Buildings
+- Commercial Buildings
+- Industrial Projects
+- Interior Solutions
+- Infrastructure Development
+
+### Company Information
+
+**Address**
+
+Sairam Villas, Plot No. 61  
+Gajalakshmi Street, Lakshmi Nagar  
+Mudichur Road, Chennai – 600048  
+(Opposite Bank of Baroda)
+
+**Email**
+
+admin@veyesinfraas.co
+
+**Phone**
+
++91 94443 85611  
++91 93810 45611
+
+---
+
+## 🚀 Features
+
+- Modern Responsive Design
+- Mobile Friendly Layout
+- Professional Construction Company Branding
+- Services Showcase
+- Portfolio / Projects Gallery
+- About Company Section
+- Contact Form
+- SEO Optimized Structure
+- Fast Loading Performance
+- Netlify Deployment
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+
+### Deployment
+
+- Netlify
+
+---
+
+## 📂 Project Structure
+
+```bash
+src/
+│
+├── app/
+│   ├── page.tsx
+│
+├── components/
+│   ├── Header.tsx
+│   ├── Hero.tsx
+│   ├── Services.tsx
+│   ├── About.tsx
+│   ├── Projects.tsx
+│   ├── WhyChooseUs.tsx
+│   ├── Contact.tsx
+│   └── Footer.tsx
+│
+├── public/
+│
+└── styles/
+```
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Rishianandd/veyesinfraas.git
+```
+
+Navigate to the project:
+
+```bash
+cd veyesinfraas
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🏗 Organizations & Associations
 
-To learn more about Next.js, take a look at the following resources:
+Veyes Infraas is associated with:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Rotary International
+- Rotary Means Business (RMB)
+- Builders Association of India (BAI)
+- Construction Network India (CNI)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📈 Future Enhancements
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Google Maps Integration
+- WhatsApp Business Integration
+- Client Testimonials
+- Dynamic Project Management System
+- CMS Integration
+- Blog Section
+- Multi-language Support
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 👨‍💻 Developed By
+
+**Rishi Anand**
+
+GitHub:
+https://github.com/Rishianandd
+
+---
+
+## 📜 License
+
+This project is developed for Veyes Infraas and intended for business and portfolio use.
