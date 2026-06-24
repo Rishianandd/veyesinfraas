@@ -11,9 +11,9 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-brand-dark text-slate-400 pt-20 pb-8 border-t border-slate-800">
+    <footer className="bg-brand-blue-dark text-slate-400 pt-20 pb-8 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-slate-800">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-slate-800 animate-fade-up">
           
           {/* Brand & Description (4 cols) */}
           <div className="lg:col-span-4 space-y-6">
@@ -27,11 +27,11 @@ export default function Footer() {
             </Link>
             
             <p className="text-sm text-slate-400 font-light leading-relaxed max-w-sm">
-              Providing premium civil engineering, custom residential builds, commercial complexes, and luxury interiors. BAI & CNI members committed to quality and trust.
+              Chennai-based construction and infrastructure specialists for residential buildings, commercial projects, industrial construction, and interior solutions.
             </p>
 
             <div className="text-xs text-slate-500 font-bold uppercase tracking-wider space-y-1">
-              <p>Residential | Commercial | Industrial | Interiors</p>
+              <p>Residential Building | Commercial | Industrial | Interiors</p>
             </div>
             
             <div className="flex space-x-4">
@@ -39,7 +39,7 @@ export default function Footer() {
                 href="https://facebook.com" 
                 target="_blank" 
                 rel="noreferrer" 
-                className="p-2.5 bg-slate-800 hover:bg-brand-green text-slate-300 hover:text-white rounded-lg transition-colors duration-200"
+                className="p-2.5 bg-slate-800 hover:bg-brand-green text-slate-300 hover:text-white rounded-xl transition-colors duration-200"
               >
                 <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24">
                   <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/>
@@ -49,7 +49,7 @@ export default function Footer() {
                 href="https://twitter.com" 
                 target="_blank" 
                 rel="noreferrer" 
-                className="p-2.5 bg-slate-800 hover:bg-brand-green text-slate-300 hover:text-white rounded-lg transition-colors duration-200"
+                className="p-2.5 bg-slate-800 hover:bg-brand-green text-slate-300 hover:text-white rounded-xl transition-colors duration-200"
               >
                 <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
@@ -59,7 +59,7 @@ export default function Footer() {
                 href="https://linkedin.com" 
                 target="_blank" 
                 rel="noreferrer" 
-                className="p-2.5 bg-slate-800 hover:bg-brand-green text-slate-300 hover:text-white rounded-lg transition-colors duration-200"
+                className="p-2.5 bg-slate-800 hover:bg-brand-green text-slate-300 hover:text-white rounded-xl transition-colors duration-200"
               >
                 <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24">
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
@@ -122,8 +122,9 @@ export default function Footer() {
               <li className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-brand-green flex-shrink-0 mt-0.5" />
                 <span className="leading-relaxed">
-                  Sairam Villas, Plot No 61,<br />
-                  Gajalakshmi Street, Lakshmi Nagar,<br />
+                  Sairam Villas, Plot No. 61,<br />
+                  Gajalakshmi Street,<br />
+                  Lakshmi Nagar,<br />
                   Mudichur Road, Chennai – 600048<br />
                   <span className="text-[10px] text-slate-500 font-bold block mt-0.5">(Opposite Bank of Baroda)</span>
                 </span>
@@ -147,9 +148,9 @@ export default function Footer() {
         </div>
 
         {/* Footer Bottom (Copyright, Legal, Back to Top) */}
-        <div className="flex flex-col sm:flex-row items-center justify-between pt-8 gap-4 text-xs font-light">
+        <div className="flex flex-col sm:flex-row items-center justify-between pt-8 gap-4 text-xs font-light animate-fade-up stagger-2">
           <div>
-            &copy; {new Date().getFullYear()} Veyes Infraas. All rights reserved. Registered Builder.
+            &copy; {new Date().getFullYear()} Veyes Infraas. All rights reserved.
           </div>
           
           <div className="flex items-center space-x-6">

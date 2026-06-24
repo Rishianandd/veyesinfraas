@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Veyes Infraas | Premium Construction & Interiors in Chennai",
-  description: "Veyes Infraas delivers excellence in Residential, Commercial, Industrial and Interior projects across Chennai with a commitment to quality, trust and innovation.",
+  title: "Veyes Infraas | Residential Building, Commercial, Industrial & Interiors",
+  description: "Veyes Infraas is a Chennai-based construction and infrastructure company specializing in residential buildings, commercial projects, industrial construction, and interior solutions.",
 };
 
 export default function RootLayout({
@@ -25,9 +25,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-transparent text-slate-900">{children}</body>
     </html>
   );
 }

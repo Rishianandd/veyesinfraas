@@ -41,8 +41,9 @@ export default function Contact() {
       title: 'Registered Office',
       details: (
         <span>
-          Sairam Villas, Plot No 61,<br />
-          Gajalakshmi Street, Lakshmi Nagar,<br />
+          Sairam Villas, Plot No. 61,<br />
+          Gajalakshmi Street,<br />
+          Lakshmi Nagar,<br />
           Mudichur Road, Chennai – 600048<br />
           <span className="font-semibold text-slate-700">(Opposite Bank of Baroda)</span>
         </span>
@@ -71,23 +72,40 @@ export default function Contact() {
   ];
 
   return (
-    <section className="py-24 bg-white" id="contact-section">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <>
+      <section className="bg-brand-blue text-white py-12" id="contact-cta">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
+            <div className="max-w-2xl">
+              <h3 className="text-2xl font-black">Ready to start your project?</h3>
+              <p className="mt-2 text-slate-200">Get a competitive quote within 48 hours. Trusted delivery and clear milestones.</p>
+            </div>
+
+            <div className="flex gap-3">
+              <a href="tel:+919444385611" className="inline-flex items-center gap-2 rounded-xl bg-brand-green px-6 py-3 text-sm font-bold text-white hover:bg-brand-green-dark transition-all">Call Now</a>
+              <a href="https://wa.me/919444385611" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/8 px-6 py-3 text-sm font-bold text-white backdrop-blur-md">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="premium-section py-24 bg-white" id="contact-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           
           {/* Contact Details (Left Side) */}
-          <div className="lg:col-span-5 space-y-10">
+          <div className="lg:col-span-5 space-y-10 animate-fade-up">
             <div className="space-y-4">
               <h2 className="text-sm font-extrabold uppercase tracking-widest text-brand-green">
                 Contact Us
               </h2>
               <h3 className="text-3xl md:text-4xl font-extrabold text-brand-blue tracking-tight leading-tight">
-                Let's Discuss Your Building Project
+                Let’s discuss your next project in Chennai
               </h3>
               <div className="h-1.5 w-24 bg-brand-green rounded-full mt-4" />
               <p className="text-slate-600 font-light leading-relaxed pt-2">
-                Have a structural project, layout blueprint, or home interior design query in Chennai? Reach out to our engineers. We offer detailed site assessments, structural reviews, and custom estimation packages.
+                Reach out for residential, commercial, industrial, and interior construction enquiries. Our team is focused on clear communication, timely delivery, and trusted execution.
               </p>
             </div>
 
@@ -115,8 +133,8 @@ export default function Contact() {
           </div>
 
           {/* Inquiry Form (Right Side) */}
-          <div className="lg:col-span-7">
-            <div className="bg-slate-50 border border-slate-100 rounded-3xl p-8 sm:p-10 shadow-sm relative overflow-hidden">
+          <div className="lg:col-span-7 animate-scale-in stagger-2">
+            <div className="premium-card rounded-[2rem] p-8 sm:p-10 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-brand-green/10 rounded-full blur-2xl -mr-6 -mt-6" />
               
               <h3 className="text-2xl font-bold text-brand-blue mb-6">
@@ -124,7 +142,7 @@ export default function Contact() {
               </h3>
 
               {isSubmitted ? (
-                <div className="flex flex-col items-center justify-center py-12 text-center space-y-4 bg-white rounded-2xl border border-slate-100 p-6 animate-pulse">
+                <div className="flex flex-col items-center justify-center py-12 text-center space-y-4 bg-white rounded-[1.75rem] border border-slate-100 p-6 animate-fade-up">
                   <CheckCircle className="h-16 w-16 text-brand-green" />
                   <h4 className="text-xl font-bold text-brand-blue">Message Sent Successfully!</h4>
                   <p className="text-slate-500 text-sm max-w-sm">
@@ -146,8 +164,8 @@ export default function Contact() {
                         required
                         value={formData.name}
                         onChange={handleInputChange}
-                        placeholder="John Doe"
-                        className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-sm focus:outline-none focus:border-brand-blue focus:ring-2 focus:ring-brand-blue-light transition-all duration-200"
+                        placeholder="Your name"
+                        className="w-full px-4 py-3 rounded-2xl border border-slate-200 bg-white text-sm focus:outline-none focus:border-brand-blue focus:ring-2 focus:ring-brand-blue-light transition-all duration-200"
                       />
                     </div>
                     
@@ -163,8 +181,8 @@ export default function Contact() {
                         required
                         value={formData.email}
                         onChange={handleInputChange}
-                        placeholder="john@example.com"
-                        className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-sm focus:outline-none focus:border-brand-blue focus:ring-2 focus:ring-brand-blue-light transition-all duration-200"
+                        placeholder="your@email.com"
+                        className="w-full px-4 py-3 rounded-2xl border border-slate-200 bg-white text-sm focus:outline-none focus:border-brand-blue focus:ring-2 focus:ring-brand-blue-light transition-all duration-200"
                       />
                     </div>
                   </div>
@@ -182,7 +200,7 @@ export default function Contact() {
                         value={formData.phone}
                         onChange={handleInputChange}
                         placeholder="+91 94443 85611"
-                        className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-sm focus:outline-none focus:border-brand-blue focus:ring-2 focus:ring-brand-blue-light transition-all duration-200"
+                        className="w-full px-4 py-3 rounded-2xl border border-slate-200 bg-white text-sm focus:outline-none focus:border-brand-blue focus:ring-2 focus:ring-brand-blue-light transition-all duration-200"
                       />
                     </div>
 
@@ -196,7 +214,7 @@ export default function Contact() {
                         id="projectType"
                         value={formData.projectType}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-sm focus:outline-none focus:border-brand-blue focus:ring-2 focus:ring-brand-blue-light transition-all duration-200"
+                        className="w-full px-4 py-3 rounded-2xl border border-slate-200 bg-white text-sm focus:outline-none focus:border-brand-blue focus:ring-2 focus:ring-brand-blue-light transition-all duration-200"
                       >
                         <option value="Residential">Residential Construction</option>
                         <option value="Commercial">Commercial Buildings</option>
@@ -208,7 +226,7 @@ export default function Contact() {
 
                   {/* Message */}
                   <div className="space-y-2">
-                    <label htmlFor="message" className="text-xs font-bold text-slate-700 uppercase tracking-wider">
+                      <label htmlFor="message" className="text-xs font-bold text-slate-700 uppercase tracking-wider">
                       Inquiry Details
                     </label>
                     <textarea
@@ -218,17 +236,17 @@ export default function Contact() {
                       required
                       value={formData.message}
                       onChange={handleInputChange}
-                      placeholder="Please details your project requirements..."
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-sm focus:outline-none focus:border-brand-blue focus:ring-2 focus:ring-brand-blue-light transition-all duration-200 resize-none"
+                      placeholder="Tell us about your project requirements..."
+                      className="w-full px-4 py-3 rounded-2xl border border-slate-200 bg-white text-sm focus:outline-none focus:border-brand-blue focus:ring-2 focus:ring-brand-blue-light transition-all duration-200 resize-none"
                     />
                   </div>
 
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full inline-flex items-center justify-center px-6 py-4 border border-transparent text-sm font-bold rounded-xl text-white bg-brand-green hover:bg-brand-green-dark hover-lift transition-all duration-200 shadow-md shadow-brand-green/10"
+                    className="w-full inline-flex items-center justify-center px-6 py-4 border border-transparent text-sm font-bold rounded-2xl text-white bg-brand-green hover:bg-brand-green-dark hover-lift transition-all duration-200 shadow-md shadow-brand-green/10"
                   >
-                    Submit Inquiry
+                    Get Free Quote
                     <Send className="ml-2 h-4 w-4" />
                   </button>
                 </form>
@@ -239,6 +257,7 @@ export default function Contact() {
         </div>
 
       </div>
-    </section>
+      </section>
+    </>
   );
 }

@@ -12,46 +12,41 @@ export default function Projects() {
 
   const projectsList = [
     {
-      title: 'Sairam Villas Duplex',
+      title: 'Luxury Residential Villas',
       category: 'Residential',
-      location: 'Mudichur Road, Chennai',
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80',
-      link: '/projects/sairam-villas',
+      location: 'Chennai Residential Developments',
+      image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498c?auto=format&fit=crop&w=900&q=80',
+      link: '/projects/luxury-villas',
+      before: 'https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=900&q=80',
+      after: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80',
     },
     {
-      title: 'Lakshmi Nagar Apartments',
-      category: 'Residential',
-      location: 'Lakshmi Nagar, Chennai',
-      image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=600&q=80',
-      link: '/projects/lakshmi-apartments',
-    },
-    {
-      title: 'OMR IT Corridor Offices',
+      title: 'Modern Commercial Complexes',
       category: 'Commercial',
-      location: 'OMR Road, Chennai',
-      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80',
-      link: '/projects/omr-offices',
+      location: 'Chennai Business District',
+      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80',
+      link: '/projects/commercial-complexes',
     },
     {
-      title: 'Sriperumbudur Factory Sheds',
+      title: 'Industrial Facilities',
       category: 'Industrial',
-      location: 'Industrial Park, Sriperumbudur',
-      image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80',
-      link: '/projects/sriperumbudur-sheds',
+      location: 'Chennai Industrial Belt',
+      image: 'https://images.unsplash.com/photo-1518622220192-5e3a9f6c9c79?auto=format&fit=crop&w=900&q=80',
+      link: '/projects/industrial-facilities',
     },
     {
-      title: 'Tambaram Modular Residences',
+      title: 'Premium Interior Transformations',
       category: 'Interiors',
-      location: 'Tambaram East, Chennai',
-      image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=600&q=80',
-      link: '/projects/tambaram-interiors',
+      location: 'Chennai Interior Fit-Outs',
+      image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80',
+      link: '/projects/interior-transformations',
     },
     {
-      title: 'GST Road Showroom Space',
+      title: 'Structural Redevelopment',
       category: 'Commercial',
-      location: 'GST Road, Chennai',
-      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80',
-      link: '/projects/gst-showroom',
+      location: 'Central Chennai',
+      image: 'https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=900&q=80',
+      link: '/projects/structural-redevelopment',
     },
   ];
 
@@ -59,28 +54,24 @@ export default function Projects() {
     ? projectsList 
     : projectsList.filter(project => project.category === activeCategory);
 
+  const featuredBeforeAfter = projectsList[0];
+
   return (
-    <section className="py-24 bg-white" id="projects-section">
+    <section className="premium-section bg-white py-24" id="projects-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-          <div className="space-y-4 max-w-xl">
-            <h2 className="text-sm font-extrabold uppercase tracking-widest text-brand-green">
-              Our Portfolio
-            </h2>
-            <h3 className="text-3xl md:text-4xl font-extrabold text-brand-blue tracking-tight">
-              Showcasing Our Engineering Handovers Across Chennai
-            </h3>
-            <div className="h-1.5 w-24 bg-brand-green rounded-full mt-4" />
+        <div className="mb-14 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+          <div className="max-w-2xl space-y-4">
+            <h2 className="text-sm font-black uppercase tracking-[0.34em] text-brand-green">Featured Projects</h2>
+            <h3 className="text-3xl font-black tracking-tight text-brand-blue sm:text-4xl">Real construction photography that builds trust instantly</h3>
+            <p className="text-slate-600 leading-relaxed">A premium gallery with before-and-after storytelling and polished project presentation.</p>
           </div>
-          
+
           <div className="flex flex-wrap gap-2">
             {categories.map(category => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-5 py-2.5 rounded-lg text-sm font-bold transition-all duration-200 ${
+                className={`rounded-full px-5 py-2.5 text-sm font-bold transition-all duration-200 ${
                   activeCategory === category
                     ? 'bg-brand-blue text-white shadow-md'
                     : 'bg-slate-50 text-slate-600 hover:bg-slate-100 hover:text-brand-blue'
@@ -92,44 +83,63 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid gap-8 lg:grid-cols-12">
+          <div className="lg:col-span-7 premium-card overflow-hidden rounded-[2rem] animate-scale-in">
+            <div className="grid min-h-[28rem] gap-0 md:grid-cols-2">
+              <div className="relative min-h-[18rem] overflow-hidden">
+                <img src={featuredBeforeAfter.before} alt="Before renovation" className="h-full w-full object-cover" />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,7,18,0.04),rgba(3,7,18,0.42))]" />
+                <div className="absolute left-4 top-4 rounded-full bg-black/35 px-3 py-1 text-[10px] font-black uppercase tracking-[0.3em] text-white backdrop-blur-md">Before</div>
+              </div>
+              <div className="relative min-h-[18rem] overflow-hidden">
+                <img src={featuredBeforeAfter.after} alt="After renovation" className="h-full w-full object-cover" />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(3,7,18,0.04),rgba(3,7,18,0.42))]" />
+                <div className="absolute left-4 top-4 rounded-full bg-brand-green/90 px-3 py-1 text-[10px] font-black uppercase tracking-[0.3em] text-white backdrop-blur-md">After</div>
+              </div>
+            </div>
+            <div className="p-6">
+              <span className="inline-flex rounded-full bg-brand-green-light px-3 py-1 text-[10px] font-black uppercase tracking-[0.3em] text-brand-green">Before / After showcase</span>
+              <h4 className="mt-4 text-2xl font-black text-brand-blue">{featuredBeforeAfter.title}</h4>
+              <p className="mt-2 text-sm text-slate-600">{featuredBeforeAfter.location}</p>
+            </div>
+          </div>
+
+          <div className="lg:col-span-5 grid gap-8">
+            {filteredProjects.slice(1, 3).map((project, idx) => (
+              <div key={project.title} className={`group relative overflow-hidden rounded-[2rem] shadow-sm transition-all duration-300 hover:shadow-xl animate-fade-up stagger-${idx + 1}`}>
+                <img src={project.image} alt={project.title} className="h-[14rem] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-blue via-brand-blue/35 to-transparent opacity-90" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                  <span className="mb-2 inline-flex rounded-md bg-brand-green px-3 py-1 text-[10px] font-black uppercase tracking-[0.28em]">{project.category}</span>
+                  <h4 className="text-xl font-bold">{project.title}</h4>
+                  <div className="mt-2 flex items-center text-sm text-slate-200">
+                    <MapPin className="mr-1 h-4 w-4 text-brand-green" />
+                    {project.location}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-8 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
           {filteredProjects.map((project, idx) => (
             <div 
               key={idx}
-              className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 h-[400px] hover-lift"
+              className={`group relative h-[24rem] overflow-hidden rounded-[1.75rem] border border-slate-100 shadow-sm transition-all duration-300 hover:shadow-xl hover-lift animate-scale-in stagger-${(idx % 6) + 1}`}
             >
-              {/* Project Image */}
-              <img 
-                src={project.image} 
-                alt={project.title}
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              
-              {/* Overlay Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-blue via-brand-blue/40 to-transparent opacity-90 transition-opacity duration-300" />
-              
-              {/* Content (Bottom Left) */}
-              <div className="absolute bottom-0 left-0 right-0 p-8 text-white z-10 flex flex-col justify-end">
-                <span className="inline-block px-3 py-1 bg-brand-green text-xs font-bold uppercase tracking-wider rounded-md w-fit mb-3">
-                  {project.category}
-                </span>
-                
-                <h4 className="text-xl font-bold font-sans tracking-tight mb-2">
-                  {project.title}
-                </h4>
-                
-                <div className="flex items-center text-sm text-slate-300 font-light mb-4">
-                  <MapPin className="h-4 w-4 mr-1 text-brand-green" />
+              <img src={project.image} alt={project.title} className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-blue via-brand-blue/38 to-transparent opacity-90" />
+              <div className="absolute bottom-0 left-0 right-0 z-10 flex flex-col justify-end p-6 text-white">
+                <span className="mb-3 inline-flex w-fit rounded-md bg-brand-green px-3 py-1 text-xs font-bold uppercase tracking-wider">{project.category}</span>
+                <h4 className="mb-2 text-xl font-bold tracking-tight">{project.title}</h4>
+                <div className="mb-4 flex items-center text-sm font-light text-slate-300">
+                  <MapPin className="mr-1 h-4 w-4 text-brand-green" />
                   {project.location}
                 </div>
-                
-                <Link 
-                  href={project.link}
-                  className="flex items-center text-sm font-bold text-white group/btn mt-1"
-                >
+                <Link href={project.link} className="mt-1 flex items-center text-sm font-bold text-white group/btn">
                   View Details
-                  <span className="ml-2 bg-white/20 p-2 rounded-full group-hover/btn:bg-brand-green transition-all duration-200">
+                  <span className="ml-2 rounded-full bg-white/20 p-2 transition-all duration-200 group-hover/btn:bg-brand-green">
                     <ArrowUpRight className="h-4 w-4" />
                   </span>
                 </Link>
@@ -138,11 +148,10 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
+        <div className="mt-16 text-center">
           <Link
             href="/projects"
-            className="inline-flex items-center justify-center px-8 py-3.5 border border-brand-blue text-sm font-bold rounded-lg text-brand-blue bg-transparent hover:bg-brand-blue hover:text-white transition-all duration-200 hover-lift"
+            className="inline-flex items-center justify-center rounded-xl border border-brand-blue px-8 py-3.5 text-sm font-bold text-brand-blue transition-all duration-200 hover:bg-brand-blue hover:text-white hover-lift"
           >
             Browse All Projects
           </Link>

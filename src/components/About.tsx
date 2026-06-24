@@ -3,111 +3,115 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { CheckCircle2, Award, Landmark, GraduationCap } from 'lucide-react';
+import { CheckCircle2, Building2, Award, Landmark, ShieldCheck } from 'lucide-react';
 
 export default function About() {
   const stats = [
-    { label: 'Completed Units', value: '180+' },
-    { label: 'Corporate Partners', value: '50+' },
-    { label: 'Chennai Engineers', value: '25+' },
-    { label: 'Years of Trust', value: '15+' },
+    { label: 'Years Experience', value: '15+' },
+    { label: 'Projects Completed', value: '250+' },
+    { label: 'Happy Clients', value: '100+' },
+    { label: 'Core Service Areas', value: '4' },
   ];
 
   const valueProps = [
-    'Affiliated Builders Association of India (BAI) Member',
-    'RMB Fellowship & Rotary International alignment',
-    'Adherence to strict CMDA & DTCP Chennai guidelines',
-    'Customized luxury interior layout engineering',
+    'Chennai-based team focused on quality and delivery',
+    'Residential, commercial, industrial and interior expertise',
+    'Transparent process from estimate to handover',
+    'Trusted workmanship backed by association credibility',
   ];
 
   return (
-    <section className="py-24 bg-white" id="about-section">
+    <section className="premium-section bg-white py-24" id="about-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-          
-          {/* Images Grid (Left Side) */}
-          <div className="lg:col-span-5 grid grid-cols-12 gap-4 relative">
-            <div className="absolute inset-0 bg-brand-green/5 rounded-3xl -m-4 z-0" />
-            <div className="col-span-8 z-10">
-              <img 
-                src="https://images.unsplash.com/photo-1503387762-592dedbd82d2?auto=format&fit=crop&w=600&q=80" 
-                alt="Modern corporate glass structure" 
-                className="rounded-2xl shadow-lg w-full h-[320px] object-cover hover:scale-[1.02] transition-transform duration-300"
-              />
-            </div>
-            <div className="col-span-4 self-end z-10">
-              <img 
-                src="https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&w=400&q=80" 
-                alt="Construction planning" 
-                className="rounded-2xl shadow-md w-full h-[180px] object-cover hover:scale-[1.02] transition-transform duration-300"
-              />
-            </div>
-            <div className="col-span-4 z-10">
-              <img 
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80" 
-                alt="Residential building front" 
-                className="rounded-2xl shadow-md w-full h-[180px] object-cover hover:scale-[1.02] transition-transform duration-300"
-              />
-            </div>
-            <div className="col-span-8 z-10">
-              <img 
-                src="https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&w=600&q=80" 
-                alt="Site construction overview" 
-                className="rounded-2xl shadow-lg w-full h-[220px] object-cover hover:scale-[1.02] transition-transform duration-300"
-              />
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
+          <div className="lg:col-span-5 animate-scale-in">
+            <div className="grid grid-cols-12 gap-4">
+              <div className="col-span-8 overflow-hidden rounded-[2rem] shadow-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=900&q=80"
+                  alt="Construction team at work"
+                  className="h-[360px] w-full object-cover"
+                />
+              </div>
+              <div className="col-span-4 overflow-hidden rounded-[2rem] shadow-lg">
+                <img
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=500&q=80"
+                  alt="Project planning board"
+                  className="h-[360px] w-full object-cover"
+                />
+              </div>
+              <div className="col-span-4 overflow-hidden rounded-[2rem] shadow-lg">
+                <img
+                  src="https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?auto=format&fit=crop&w=500&q=80"
+                  alt="Completed residential building"
+                  className="h-[220px] w-full object-cover"
+                />
+              </div>
+              <div className="col-span-8 premium-card rounded-[2rem] p-5">
+                <div className="flex items-center gap-3 text-brand-green text-xs font-black uppercase tracking-[0.3em]">
+                  <Building2 className="h-4 w-4" />
+                  Chennai construction partner
+                </div>
+                <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                  Trusted execution for homes, businesses and industrial spaces.
+                </p>
+              </div>
             </div>
           </div>
 
-          {/* Text Content (Right Side) */}
-          <div className="lg:col-span-7 space-y-8">
+          <div className="lg:col-span-7 space-y-8 animate-fade-up stagger-2">
             <div className="space-y-4">
-              <h2 className="text-sm font-extrabold uppercase tracking-widest text-brand-green">
+              <h2 className="text-sm font-black uppercase tracking-[0.34em] text-brand-green">
                 About Veyes Infraas
               </h2>
-              <h3 className="text-3xl sm:text-4xl font-extrabold text-brand-blue tracking-tight leading-tight">
-                Crafting Superior Civil Milestones & Interiors Across Chennai
+              <h3 className="max-w-2xl text-3xl font-black leading-tight tracking-tight text-brand-blue sm:text-4xl">
+                Construction built on trust, finish quality and timely delivery.
               </h3>
-              <div className="h-1.5 w-24 bg-brand-green rounded-full mt-4" />
+              <p className="max-w-2xl text-base leading-relaxed text-slate-600">
+                We deliver premium construction and interior solutions with a simple promise: clear communication, clean execution and handover you can trust.
+              </p>
             </div>
 
-            <p className="text-slate-600 font-light leading-relaxed text-base">
-              Veyes Infraas is a leading Chennai-based civil construction, design, and interior contracting firm. Headquartered in Mudichur Road, Chennai, we specialize in translating ambitious blueprints into solid landmarks. Our work spans premium residential buildings (including individual houses at Sairam Villas), commercial developments, large-scale industrial warehouses, and luxury interior design solutions.
-            </p>
-
-            <p className="text-slate-600 font-light leading-relaxed text-sm">
-              We take pride in our affiliations with industry associations such as the **Builders Association of India (BAI)**, **Construction Network India (CNI)**, and professional fellowships like **Rotary Means Business (RMB)**. These memberships ensure we implement top-tier supply chains, execute fair labor contracts, and offer highly competitive pricing parameters for our clients.
-            </p>
-
-            {/* List of Value Props */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {valueProps.map((prop, idx) => (
-                <div key={idx} className="flex items-start space-x-2.5">
-                  <CheckCircle2 className="h-5 w-5 text-brand-green mt-0.5 flex-shrink-0" />
-                  <span className="text-sm font-medium text-slate-700 leading-snug">{prop}</span>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {valueProps.map((prop) => (
+                <div key={prop} className="flex items-start gap-3 rounded-2xl border border-slate-100 bg-white px-4 py-4 shadow-sm">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-brand-green" />
+                  <p className="text-sm leading-relaxed text-slate-700">{prop}</p>
                 </div>
               ))}
             </div>
 
-            {/* Stats Counter Display */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 p-6 bg-slate-50 rounded-2xl border border-slate-100">
-              {stats.map((stat, idx) => (
-                <div key={idx} className="text-center sm:text-left">
+            <div className="grid gap-4 sm:grid-cols-4">
+              {stats.map((stat) => (
+                <div key={stat.label} className="premium-card rounded-[1.5rem] p-5 text-center sm:text-left">
                   <p className="text-3xl font-black text-brand-blue">{stat.value}</p>
-                  <p className="text-xs text-slate-500 font-bold uppercase tracking-wider mt-1">{stat.label}</p>
+                  <p className="mt-1 text-[10px] font-black uppercase tracking-[0.3em] text-slate-500">{stat.label}</p>
                 </div>
               ))}
             </div>
 
-            <div className="pt-2">
-              <Link
-                href="/about"
-                className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-sm font-bold rounded-lg text-white bg-brand-blue hover:bg-brand-blue-dark transition-all duration-200 hover-lift shadow-md"
-              >
-                Our Values & Heritage
-              </Link>
+            <div className="flex flex-wrap gap-3">
+              <div className="inline-flex items-center gap-2 rounded-full border border-brand-green/20 bg-brand-green-light px-4 py-2 text-xs font-black uppercase tracking-[0.28em] text-brand-green">
+                <ShieldCheck className="h-4 w-4" />
+                Association-backed trust
+              </div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-brand-blue/20 bg-brand-blue-light px-4 py-2 text-xs font-black uppercase tracking-[0.28em] text-brand-blue">
+                <Award className="h-4 w-4" />
+                Premium delivery focus
+              </div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-black uppercase tracking-[0.28em] text-slate-600">
+                <Landmark className="h-4 w-4" />
+                Chennai built
+              </div>
             </div>
-          </div>
 
+            <Link
+              href="/about"
+              className="inline-flex items-center justify-center rounded-xl bg-brand-blue px-6 py-3 text-sm font-bold text-white shadow-md transition-all duration-200 hover:bg-brand-blue-dark hover-lift"
+            >
+              Learn More About Us
+            </Link>
+          </div>
         </div>
       </div>
     </section>

@@ -8,6 +8,10 @@ import WhyChooseUs from '@/components/WhyChooseUs';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import Testimonials from '@/components/Testimonials';
+import Associations from '@/components/Associations';
+
+import FloatingActionButtons from '@/components/FloatingActionButtons';
 
 export default function Home() {
   return (
@@ -26,11 +30,20 @@ export default function Home() {
         {/* Company Overview Section */}
         <About />
 
+        {/* Services */}
+        <Services />
+
         {/* Selected Portfolio Highlights Section */}
         <Projects />
 
-        {/* Value Proposition & Integrity Section */}
+        {/* Why Choose */}
         <WhyChooseUs />
+
+        {/* Testimonials */}
+        <Testimonials />
+
+        {/* Associations */}
+        <Associations />
 
         {/* Inquiry & Lead Intake Form Section */}
         <Contact />
@@ -38,6 +51,9 @@ export default function Home() {
 
       {/* Corporate Footer */}
       <Footer />
+      
+      {/* Floating Action Buttons */}
+      <FloatingActionButtons />
     </div>
   );
 }
